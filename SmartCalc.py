@@ -68,7 +68,6 @@ def infix_to_postfix(s):
     stack = []
     rslt = []
     lst = s.split()
-    #top = ''
     for z in lst:
         if z.isdigit():
             rslt.append(z)

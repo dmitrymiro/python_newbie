@@ -18,14 +18,14 @@ def assign_chk(input_string):
     lst = [x.strip() for x in lst]
     if len(lst) > 2:
         return print('Invalid assignment')
-    if not lst[0].isalpha():
+    elif not lst[0].isalpha():
         return print('Invalid identifier')
-    if lst[0].isalpha() and lst[1].isalpha():
+    elif lst[0].isalpha() and lst[1].isalpha():
         if lst[1] in vari.keys():
             vari.update({lst[0]: vari.get(lst[1])})
         else:
             return print('Unknown variable')
-    if lst[1].isdigit():
+    elif lst[1].isdigit():
         vari.update({lst[0]: lst[1]})
     else:
         return print('Invalid assignment')
